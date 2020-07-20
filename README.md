@@ -1,6 +1,6 @@
-# license
+# `license`
 
-CLI license generator
+`license` - CLI license generator
 
 ### Download
 
