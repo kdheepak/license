@@ -70,5 +70,5 @@ when isMainModule:
   const nd = staticRead "../license.nimble"
   clCfg.version = nd.fromNimble("version")
   dispatch(
-    license, doc="CLI License Generator",
+    license,
   )

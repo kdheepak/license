@@ -3,7 +3,7 @@
 Command line license generator
 
 ```bash
-$ license list
+$ license
 agpl-3.0   https://choosealicense.com/licenses/agpl-3.0/
 apache-2   https://choosealicense.com/licenses/apache-2.0/
 lgpl-3.0   https://choosealicense.com/licenses/lgpl-3.0/
@@ -15,7 +15,7 @@ mit        https://choosealicense.com/licenses/mit/
 ```
 
 ```bash
-$ license generate -l mit -n "Dheepak Krishnamurthy" -y 2020
+$ license -l mit -n "Dheepak Krishnamurthy" -y 2020
 MIT License
 
 Copyright (c) 2020 Dheepak Krishnamurthy
@@ -37,4 +37,23 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
+```
+
+```bash
+$ license --help
+Usage:
+  license [optional-params]
+Options:
+  -h, --help                          print this cligen-erated help
+  --help-syntax                       advanced: prepend,plurals,..
+  --version            bool    false  print version
+  -l=, --license=      string  ""     set license
+  -n=, --name=         string  ""     set name
+  -y=, --year=         int     2020   set year
+  -d=, --description=  string  ""     set description
+```
+
+```bash
+$ license --version
+0.2.0
 ```
