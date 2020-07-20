@@ -42,8 +42,14 @@ SOFTWARE.
 ```bash
 $ license --help
 Usage:
+
+NAME
+  license - CLI license generator
+
+USAGE
   license [optional-params]
-Options:
+
+OPTIONS
   -h, --help                          print this cligen-erated help
   --help-syntax                       advanced: prepend,plurals,..
   --version            bool    false  print version
@@ -51,9 +57,13 @@ Options:
   -n=, --name=         string  ""     set name
   -y=, --year=         int     2020   set year
   -d=, --description=  string  ""     set description
-```
 
-```bash
-$ license --version
-0.2.0
+URI
+  https://github.com/kdheepak/license
+
+AUTHOR
+  Dheepak Krishnamurthy
+
+VERSION
+  v0.2.1
 ```
