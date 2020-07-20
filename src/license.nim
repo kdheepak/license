@@ -40,6 +40,7 @@ proc list(): int =
   return 0
 
 proc license*(license: string = "", name: string = "", year: int = now().year, description = ""): int =
+  ## CLI license generator
   if license == "":
     discard list()
     return 0
@@ -68,7 +69,19 @@ when isMainModule:
   import cligen
   include cligen/mergeCfgEnv
   const nd = staticRead "../license.nimble"
-  clCfg.version = nd.fromNimble("version")
+
+  const
+    version = staticExec("git describe --tags HEAD")
+    uri = "https://github.com/kdheepak/license"
+    # https://github.com/c-blake/cligen/issues/107
+    myUsage = "\nNAME\n  license - ${doc}" &
+      "\nUSAGE\n  ${command} ${args}" &
+      "\n\nOPTIONS\n$options" &
+      "\nURI\n  " & uri &
+      "\n\nAUTHOR\n  " & nd.fromNimble("author") &
+      "\n\nVERSION\n  " & version
+
+  clCfg.version = version
   dispatch(
-    license,
+    license, usage = myUsage
   )
