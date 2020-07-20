@@ -34,7 +34,7 @@ proc list(): int =
     echo &"""{key:<15}""", LICENSES[key].link
   return 0
 
-proc generate(license: string, name: string, year: int = now().year, description = ""): int =
+proc generate*(license: string, name: string, year: int = now().year, description = ""): int =
   var lt: LicenseTemplate
   if license in LICENSES:
     lt = LICENSES[license]
