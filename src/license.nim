@@ -39,7 +39,11 @@ proc list(): int =
     echo alignLeft(&"{key}", padding), LICENSES[key].link
   return 0
 
-proc generate*(license: string, name: string, year: int = now().year, description = ""): int =
+proc license*(license: string = "", name: string = "", year: int = now().year, description = ""): int =
+  if license == "":
+    discard list()
+    return 0
+
   var lt: LicenseTemplate
   if license in LICENSES:
     lt = LICENSES[license]
@@ -65,7 +69,6 @@ when isMainModule:
   include cligen/mergeCfgEnv
   const nd = staticRead "../license.nimble"
   clCfg.version = nd.fromNimble("version")
-  dispatchMulti(
-    [ generate, noAutoEcho=true ],
-    [ list, noAutoEcho=true ],
+  dispatch(
+    license, doc="CLI License Generator",
   )

@@ -7,11 +7,11 @@ when isMainModule:
 
     test "lexer":
       check:
-        generate("agpl-3.0", "Dheepak Krishnamurthy") == 0
-        generate("bsl-1.0", "Dheepak Krishnamurthy") == 0
-        generate("gpl-3.0", "Dheepak Krishnamurthy") == 0
-        generate("lgpl-3.0", "Dheepak Krishnamurthy") == 0
-        generate("mit", "Dheepak Krishnamurthy") == 0
-        generate("mpl-2.0", "Dheepak Krishnamurthy") == 0
-        generate("unlicense", "Dheepak Krishnamurthy") == 0
-        generate("doesnotexist", "Dheepak Krishnamurthy") == 1
+        license("agpl-3.0", "Dheepak Krishnamurthy") == 0
+        license("bsl-1.0", "Dheepak Krishnamurthy") == 0
+        license("gpl-3.0", "Dheepak Krishnamurthy") == 0
+        license("lgpl-3.0", "Dheepak Krishnamurthy") == 0
+        license("mit", "Dheepak Krishnamurthy") == 0
+        license("mpl-2.0", "Dheepak Krishnamurthy") == 0
+        license("unlicense", "Dheepak Krishnamurthy") == 0
+        license("doesnotexist", "Dheepak Krishnamurthy") == 1
