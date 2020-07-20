@@ -3,6 +3,7 @@ import moustachu
 import tables
 import times
 import strformat
+import strutils
 
 type LicenseTemplate = object
   tmpl: string
@@ -30,8 +31,12 @@ LICENSES["mpl-2.0"]   = mpl_2_0
 LICENSES["unlicense"] = unlicense
 
 proc list(): int =
+  var padding = 0
   for key in keys(LICENSES):
-    echo &"""{key:<15}""", LICENSES[key].link
+    padding = max(padding, key.len)
+  padding += 2
+  for key in keys(LICENSES):
+    echo alignLeft(&"{key}", padding), LICENSES[key].link
   return 0
 
 proc generate*(license: string, name: string, year: int = now().year, description = ""): int =
