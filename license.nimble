@@ -12,6 +12,7 @@ bin           = @["license"]
 
 requires "nim >= 1.2.0"
 requires "cligen"
+requires "moustachu"
 
 import strutils
 import os
