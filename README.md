@@ -1,6 +1,6 @@
 # license
 
-Command line license generator
+CLI license generator
 
 ```bash
 $ license
