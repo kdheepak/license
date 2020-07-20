@@ -17,6 +17,8 @@ jobs:
     - uses: jiro4989/setup-nim-action@v1
       with:
         nim-version: ${{ env.NIM_VERSION }}
+    - name: Run test
+      run: nimble test
     - name: Build files
       run: nimble release
     - name: Upload artifacts
