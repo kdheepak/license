@@ -21,7 +21,7 @@ mit        https://choosealicense.com/licenses/mit/
 ```
 
 ```bash
-$ license -l mit -n "Dheepak Krishnamurthy" -y 2020
+$ license -l mit -n "Dheepak Krishnamurthy"
 MIT License
 
 Copyright (c) 2020 Dheepak Krishnamurthy
