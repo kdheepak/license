@@ -73,7 +73,6 @@ when isMainModule:
   const
     version = staticExec("git describe --tags HEAD")
     uri = "https://github.com/kdheepak/license"
-    # https://github.com/c-blake/cligen/issues/107
     myUsage = "\nNAME\n  license - ${doc}" &
       "\nUSAGE\n  ${command} ${args}" &
       "\n\nOPTIONS\n$options" &
