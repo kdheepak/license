@@ -4,7 +4,7 @@ CLI license generator
 
 ### Download
 
-Check out [the latest release](https://github.com/kdheepak/license/releases/latest/) for a precompiled static binary that you can run from the command line.
+Check out [the latest releases](https://github.com/kdheepak/license/releases/latest/) for a precompiled static binary that you can run from the command line.
 
 ### Usage
 
